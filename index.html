@@ -1,5 +1,4 @@
 
-
 <head>
   <meta charset="utf-8" />
 
@@ -5169,18 +5168,19 @@
   print-color-adjust: exact;
 }
 
-/* 3 cards */
+/* Updated grid padding and margins to align perfectly with Page 7 layout dimensions */
 .pg8n-grid {
   padding: 0 48px;
   margin-top: 75px;
   margin-bottom: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
   position: relative;
   z-index: 3;
 }
 
+/* Card sizing updated from 245px to 265px match */
 .pg8n-card {
   background: white !important;
   border-radius: 12px;
@@ -5227,23 +5227,23 @@
   border-bottom-right-radius: 6px;
 }
 
-    .pg8n-c-name {
-      position: absolute;
-      bottom: 28px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      color: white;
-      font-family: 'Jost', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      padding: 0 10px;
-      line-height: 1.3;
-      z-index: 3;
-      /* text-shadow removed — was causing a black box to appear under names when printed via Chrome */
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
+/* Typography elements updated to match font sizes and spacing metrics */
+.pg8n-c-name {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  font-size: 11.5px;
+  padding: 0 6px;
+  line-height: 1.3;
+  z-index: 3;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
 
 .pg8n-c-crest-float {
   position: absolute;
@@ -5360,7 +5360,6 @@
   text-align: center;
   border-right: 1px solid rgba(200, 138, 101, 0.18);
   background: white !important;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
 .pg8n-fs-item:last-child {
@@ -5396,7 +5395,6 @@
   font-weight: 600;
 }
 
-/* FIX: Remove text-shadow on university names to prevent black box artifact when printing via Chrome */
 @media print {
   .pg8n-card,
   .pg8n-c-crest-float,
@@ -5434,7 +5432,7 @@
     </div>
   </div>
 
-  <!-- 3-Column structured card block -->
+  <!-- 5-Column structured card block shifted lower to match page-7 specs exactly -->
   <div class="pg8n-grid">
 
     <!-- Card 01 -->
@@ -5496,6 +5494,48 @@
       </div>
       <div class="pg8n-c-bot">
         <div><span class="v">2001</span><span class="l">ESTD.</span></div>
+        <div><span class="v">Tbilisi</span><span class="l">Location</span></div>
+      </div>
+    </div>
+
+    <!-- Card 04 -->
+    <div class="pg8n-card">
+      <div class="pg8n-c-top">
+        <img src="https://eu.edu.ge/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-30-at-21.35.04.jpeg" alt="European University Faculty of Medicine">
+        <div class="pg8n-c-overlay"></div>
+        <div class="pg8n-c-badge">04</div>
+        <div class="pg8n-c-name">European University<br>Faculty of Medicine</div>
+        <div class="pg8n-c-crest-float">
+          <img src="./european_univerity-removebg-preview.png" alt="EU Logo">
+        </div>
+      </div>
+      <div class="pg8n-c-mid">
+        <span class="pg8n-mid-fee-lbl">Tuition Fee</span>
+        <span class="pg8n-mid-fee-val">USD 3,500/Yr</span>
+      </div>
+      <div class="pg8n-c-bot">
+        <div><span class="v">2012</span><span class="l">ESTD.</span></div>
+        <div><span class="v">Tbilisi</span><span class="l">Location</span></div>
+      </div>
+    </div>
+
+    <!-- Card 05 -->
+    <div class="pg8n-card">
+      <div class="pg8n-c-top">
+        <img src="https://www.medlinkstudents.com/wp-content/uploads/2024/10/Grigol-Robakidze-University-Campus-2.jpg" alt="Grigol Robakidze University School of Medicine">
+        <div class="pg8n-c-overlay"></div>
+        <div class="pg8n-c-badge">05</div>
+        <div class="pg8n-c-name">Grigol Robakidze<br>University</div>
+        <div class="pg8n-c-crest-float">
+          <img src="https://edurank.org/assets/img/uni-logos/grigol-robakidze-university-logo.png" alt="GRUNI Logo">
+        </div>
+      </div>
+      <div class="pg8n-c-mid">
+        <span class="pg8n-mid-fee-lbl">Tuition Fee</span>
+        <span class="pg8n-mid-fee-val">USD 3,500/Yr</span>
+      </div>
+      <div class="pg8n-c-bot">
+        <div><span class="v">1992</span><span class="l">ESTD.</span></div>
         <div><span class="v">Tbilisi</span><span class="l">Location</span></div>
       </div>
     </div>
@@ -6424,15 +6464,495 @@
 </section>
 
 
+<!-- UNIVERSITY DETAIL: EU NURSING -->
+<section class="uni-detail-page" id="page-eu-nursing">
+
+  <div class="estd-label-box">
+    <span class="estd-txt">ESTD</span>
+    <span class="estd-yr">2012</span>
+  </div>
+
+  <div class="uni-hero">
+    <div class="hero-img-container">
+      <img alt="European University Faculty of Medicine"
+        src="https://eu.edu.ge/wp-content/uploads/2023/08/WhatsApp-Image-2023-08-30-at-21.35.04.jpeg" />
+    </div>
+
+    <div class="hero-text-overlay">
+      <span class="uni-pre-lbl">NURSING PROGRAMME</span>
+      <h2 class="uni-main-h">European<br />University</h2>
+
+      <div class="uni-loc">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Tbilisi, Georgia
+      </div>
+    </div>
+  </div>
+
+  <div class="uni-info-container" style="flex-direction: column; overflow: hidden;">
+    <div class="stats-col" style="flex: none; padding: 16px 20px 0; width: 100%;">
+      <div class="stats-inner-box" style="display: grid; grid-template-columns: repeat(4, 1fr); border-radius: 10px;">
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Tuition Fee</span>
+            <span class="s-val">USD 3,500/Yr</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Duration</span>
+            <span class="s-val">4 YEARS</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Medium</span>
+            <span class="s-val">ENGLISH</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: none; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Programme</span>
+            <span class="s-val">B.Sc. NURSING</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-col" style="padding: 20px 24px 28px; width: 100%;">
+      <h4>About the Nursing Programme</h4>
+      <p>
+        European University Faculty of Medicine, Tbilisi, offers a comprehensive Bachelor of Science in Nursing programme delivered entirely in English, aligned with European ECTS standards. With modern simulation laboratories, Jo Ann University Hospital affiliation, and strong international student support, EU provides affordable, globally-recognised clinical training. The nursing curriculum emphasizes evidence-based practice, patient-centered care, and global licensing readiness — an ideal European pathway for Indian nursing aspirants at just USD 3,500 per year.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature-header-text"
+    style="text-align: center; margin-top: 10px; margin-bottom: 10px; width: 100%; display: flex; align-items: center; justify-content: center; padding: 0 45px; box-sizing: border-box;">
+    <div style="flex: 1; height: 1px; background-color: #C88A65; opacity: 0.3;"></div>
+    <h4
+      style="margin: 0 15px; font-size: 13px; font-weight: 700; color: #C88A65; letter-spacing: 4px; text-transform: uppercase; white-space: nowrap; line-height: 1;">
+      Key Points</h4>
+    <div style="flex: 1; height: 1px; background-color: #C88A65; opacity: 0.3;"></div>
+  </div>
+
+  <div class="feature-grid"
+    style="display: grid; grid-template-columns: repeat(3, 1fr); padding: 0 45px 12px 45px; gap: 8px; width: 100%; box-sizing: border-box;">
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">INTERNATIONALLY RECOGNISED</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">MODERN INFRASTRUCTURE</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">STRONG COMMUNITY</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">HOSPITAL EXPOSURE</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">ECTS EUROPEAN STANDARD</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">GLOBAL OPPORTUNITIES</b>
+    </div>
+
+  </div>
+
+<div class="fee-block">
+  <div class="fee-header-text">
+    <h4>Fee Structure — Nursing</h4>
+  </div>
+
+  <table class="fee-table-main">
+    <thead>
+      <tr>
+        <th>Academic Year</th>
+        <th>Tuition Fee (USD)</th>
+        <th>Living Expenses</th>
+        <th>Total (USD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>2nd Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>3rd Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>4th Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <div class="accred-strip">
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <circle cx="12" cy="12" r="10"></circle>
+
+          <path d="M2 12h20"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>EU CURRICULUM</b><span>ECTS Standards</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <path d="M3 21h18M3 7v14M21 7v14"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>EXCELLENCE</b><span>Clinical Training</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <circle cx="12" cy="12" r="10"></circle>
+
+          <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>GLOBAL DEGREE</b><span>Practice Worldwide</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>JO ANN HOSPITAL</b><span>AFFILIATED</span></div>
+
+    </div>
+
+  </div>
 
 
+  <div class="brand-footer">
+    <div class="brand-name">EUROPEAN UNIVERSITY — NURSING</div>
+  </div>
+
+</section>
+
+<!-- UNIVERSITY DETAIL: GRUNI NURSING -->
+<section class="uni-detail-page" id="page-gruni-nursing">
+
+  <div class="estd-label-box">
+    <span class="estd-txt">ESTD</span>
+    <span class="estd-yr">1992</span>
+  </div>
+
+  <div class="uni-hero">
+    <div class="hero-img-container">
+      <img alt="Grigol Robakidze University School of Medicine"
+        src="https://www.medlinkstudents.com/wp-content/uploads/2024/10/Grigol-Robakidze-University-Campus-2.jpg" />
+    </div>
+
+    <div class="hero-text-overlay">
+      <span class="uni-pre-lbl">NURSING PROGRAMME</span>
+      <h2 class="uni-main-h">Grigol Robakidze<br />University</h2>
+
+      <div class="uni-loc">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        Tbilisi, Georgia
+      </div>
+    </div>
+  </div>
+
+  <div class="uni-info-container" style="flex-direction: column; overflow: hidden;">
+    <div class="stats-col" style="flex: none; padding: 16px 20px 0; width: 100%;">
+      <div class="stats-inner-box" style="display: grid; grid-template-columns: repeat(4, 1fr); border-radius: 10px;">
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Tuition Fee</span>
+            <span class="s-val">USD 3,500/Yr</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Duration</span>
+            <span class="s-val">4 YEARS</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: 1px solid #F0EBE4; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Medium</span>
+            <span class="s-val">ENGLISH</span>
+          </div>
+        </div>
+
+        <div class="stat-tile" style="border-right: none; border-bottom: none; padding: 14px;">
+          <div class="s-icon-shell">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="s-text-wrap">
+            <span class="s-label">Programme</span>
+            <span class="s-val">B.Sc. NURSING</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-col" style="padding: 20px 24px 28px; width: 100%;">
+      <h4>About the Nursing Programme</h4>
+      <p>
+        Grigol Robakidze University (GRUNI) School of Medicine, Tbilisi — established 1992 — is ranked among Georgia’s Top-5 universities for graduate employment (UNESCO). The 4-year English-medium B.Sc. Nursing programme combines modern simulation training, clinical internships at university-affiliated hospitals, and a globally recognised ECTS curriculum. With students from 50+ countries, WHO-listed recognition, affordable USD 3,500/year tuition, and strong practical exposure across Medicine, Dentistry and Nursing, GRUNI offers Indian students a trusted, career-ready European nursing pathway.
+      </p>
+    </div>
+  </div>
+
+  <div class="feature-header-text"
+    style="text-align: center; margin-top: 10px; margin-bottom: 10px; width: 100%; display: flex; align-items: center; justify-content: center; padding: 0 45px; box-sizing: border-box;">
+    <div style="flex: 1; height: 1px; background-color: #C88A65; opacity: 0.3;"></div>
+    <h4
+      style="margin: 0 15px; font-size: 13px; font-weight: 700; color: #C88A65; letter-spacing: 4px; text-transform: uppercase; white-space: nowrap; line-height: 1;">
+      Key Points</h4>
+    <div style="flex: 1; height: 1px; background-color: #C88A65; opacity: 0.3;"></div>
+  </div>
+
+  <div class="feature-grid"
+    style="display: grid; grid-template-columns: repeat(3, 1fr); padding: 0 45px 12px 45px; gap: 8px; width: 100%; box-sizing: border-box;">
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">INTERNATIONALLY RECOGNISED</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">MODERN INFRASTRUCTURE</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">TOP-5 EMPLOYMENT</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">HOSPITAL EXPOSURE</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">ECTS EUROPEAN STANDARD</b>
+    </div>
+
+    <div class="feat-card"
+      style="padding: 6px 4px; height: 30px; border-radius: 10px; display: flex; align-items: center; justify-content: center; text-align: center; width: 100%; box-sizing: border-box;">
+      <b style="font-size: 7.5px; line-height: 1.1; letter-spacing: 0.2px;">50+ COUNTRIES</b>
+    </div>
+
+  </div>
+
+<div class="fee-block">
+  <div class="fee-header-text">
+    <h4>Fee Structure — Nursing</h4>
+  </div>
+
+  <table class="fee-table-main">
+    <thead>
+      <tr>
+        <th>Academic Year</th>
+        <th>Tuition Fee (USD)</th>
+        <th>Living Expenses</th>
+        <th>Total (USD)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1st Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>2nd Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>3rd Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+      <tr>
+        <td>4th Year</td>
+        <td>$ 3,500</td>
+        <td>$ 3,000</td>
+        <td class="total-hl">$ 6,500</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  <div class="accred-strip">
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <circle cx="12" cy="12" r="10"></circle>
+
+          <path d="M2 12h20"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>EU CURRICULUM</b><span>ECTS Standards</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <path d="M3 21h18M3 7v14M21 7v14"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>WDOMS LISTED</b><span>WHO Recognized</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <circle cx="12" cy="12" r="10"></circle>
+
+          <path d="M12 2a15.3 15.3 0 0 1 0 20"></path>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>GLOBAL DEGREE</b><span>Practice Worldwide</span></div>
+
+    </div>
+
+    <div class="accred-item">
+
+      <div class="accred-icon"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="-2 -2 28 28">
+
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+
+        </svg></div>
+
+      <div class="accred-txt"><b>TOP-5 GEORGIA</b><span>EMPLOYMENT</span></div>
+
+    </div>
+
+  </div>
 
 
+  <div class="brand-footer">
+    <div class="brand-name">GRIGOL ROBAKIDZE UNIVERSITY — NURSING</div>
+  </div>
 
-
-
-
-
+</section>
 
   <section id="page-16-final">
     <style>
@@ -6706,6 +7226,6 @@
     </div>
   </section>
   <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a0d338372ec7380b',t:'MTc4MTcxMTUyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1244de39fbc7fb1',t:'MTc4MjU2MTc2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1244de39fbc7fb1',t:'MTc4MjU2MTc2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a153c02e8b819bed',t:'MTc4MzA1OTI3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
