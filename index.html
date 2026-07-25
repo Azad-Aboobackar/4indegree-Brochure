@@ -1,4 +1,7 @@
 
+     
+
+   
 <head>
   <meta charset="utf-8" />
 
@@ -18,9 +21,9 @@
       print-color-adjust: exact !important;
       color-adjust: exact !important;
     }
-
+    
     :root {
-      --obsidian: #0D151C;
+       --obsidian: #0D151C;
       --obsidian-2: #14202A;
       --obsidian-3: #1D2D3B;
       --obsidian-4: #283D4F;
@@ -970,7 +973,7 @@
 
       <span class="pg1-h1-line1">Your Medical Career</span>
       <span class="pg1-h1-line2">Begins in</span>
-      <span class="pg1-h1-europe">Europe</span>
+      <span class="pg1-h1-europe">Georgia</span>
 
       <p class="pg1-sub">
         Study <strong>in Georgia</strong><br />
@@ -1722,6 +1725,519 @@
 
 
 
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+<section id="page-georgia-map">
+  <style>
+    .gmap-page {
+      background: #F7F3ED !important;
+      width: 794px;
+      height: 1123px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      margin: 0 auto;
+      font-family: 'Jost', sans-serif;
+    }
+
+    /* ── HEADER ── */
+    .gmap-header {
+      padding: 32px 44px 0;
+      flex-shrink: 0;
+    }
+
+    .gmap-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #C88A65 !important;
+      margin-bottom: 6px;
+    }
+
+    .gmap-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 46px;
+      font-weight: 700;
+      color: #121A22 !important;
+      line-height: 1.05;
+      margin: 0 0 2px;
+    }
+
+    .gmap-title em {
+      font-style: italic;
+      color: #C88A65 !important;
+    }
+
+    .gmap-divider {
+      width: 52px;
+      height: 2.5px;
+      background: #C88A65 !important;
+      border-radius: 2px;
+      margin: 10px 0 12px;
+    }
+
+    .gmap-intro {
+      font-size: 12.5px;
+      color: #324252 !important;
+      line-height: 1.55;
+      margin: 0;
+      max-width: 680px;
+    }
+
+    .gmap-intro strong {
+      color: #121A22 !important;
+      font-weight: 700;
+    }
+
+    /* ── MAP PANEL ── */
+    .gmap-panel {
+      margin: 16px 22px 0;
+      background: #FDFBF7 !important;
+      border: 1px solid rgba(200, 138, 101, 0.16);
+      border-radius: 16px;
+      flex-shrink: 0;
+      height: 494px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gmap-panel svg {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .gmap-route-svg {
+      display: block !important;
+    }
+
+    /* ── THREE INFO CARDS ── */
+    .gmap-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      padding: 14px 30px 0;
+      flex-shrink: 0;
+    }
+
+    .gmap-card {
+      background: #FFFFFF !important;
+      border: 1px solid rgba(200, 138, 101, 0.16);
+      border-radius: 14px;
+      padding: 17px 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gmap-card-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(200, 138, 101, 0.10) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+
+    .gmap-card-icon svg {
+      width: 17px;
+      height: 17px;
+      stroke: #C88A65;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .gmap-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 700;
+      color: #121A22 !important;
+      margin: 0 0 7px;
+      line-height: 1.15;
+    }
+
+    .gmap-card-desc {
+      font-size: 10.5px;
+      color: #45596B !important;
+      line-height: 1.52;
+      margin: 0;
+    }
+
+    /* ── BOTTOM PHOTO BANNER ── */
+    .gmap-banner {
+      margin: 12px 30px 0;
+      height: 104px;
+      border-radius: 14px;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
+      background: #14202A !important;
+    }
+
+    .gmap-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.72;
+    }
+
+    .gmap-banner-label {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      background: rgba(255, 255, 255, 0.93) !important;
+      padding: 5px 14px;
+      border-radius: 6px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #A8622F !important;
+    }
+
+    /* ── FOOTER ── */
+    .gmap-footer {
+      padding: 9px 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      border-top: 1px solid rgba(200, 138, 101, 0.16);
+      margin-top: 9px;
+    }
+
+    .gmap-footer-left {
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #A08C7A !important;
+      font-weight: 500;
+    }
+
+    .gmap-footer-right {
+      font-size: 9px;
+      color: #A08C7A !important;
+      font-weight: 500;
+    }
+
+    @media print {
+      #page-georgia-map {
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+
+      #page-georgia-map,
+      #page-georgia-map * {
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        text-shadow: none !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      .gmap-page {
+        width: 794px !important;
+        height: 1123px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  </style>
+
+  <div class="page-fixed gmap-page">
+
+    <!-- HEADER -->
+    <div class="gmap-header">
+      <div class="gmap-eyebrow">University Locations</div>
+      <h2 class="gmap-title">Life Around <em>Georgian Campuses</em></h2>
+      <div class="gmap-divider"></div>
+      <p class="gmap-intro">All nine partner universities sit inside Tbilisi, the capital of Georgia — eight offering
+        English-taught MBBS and one offering BSc Nursing. <strong>Shota Rustaveli Tbilisi International Airport is the
+          single gateway</strong>, placing every campus within a 20–40 minute drive. One city, nine campuses, no
+        domestic travel needed.</p>
+    </div>
+
+    <!-- MAP PANEL -->
+    <div class="gmap-panel">
+      <svg class="gmap-route-svg" viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet" aria-label="Tbilisi universities and airport distance map">
+        <defs>
+          <!-- reusable university (graduation-cap) glyph, dropped into every marker -->
+          <symbol id="uniGlyph" viewBox="0 0 24 24">
+            <path d="M12 3.2 L2 8.6 L12 14 L22 8.6 Z" fill="#FFFFFF"/>
+            <path d="M6 11.1v4.2c0 1.1 2.7 2.9 6 2.9s6-1.8 6-2.9v-4.2l-6 3.1z" fill="#FFFFFF" opacity="0.94"/>
+            <path d="M20.4 9.4v4.9" stroke="#FFFFFF" stroke-width="1.15" stroke-linecap="round" fill="none"/>
+            <circle cx="20.4" cy="14.6" r="1.05" fill="#FFFFFF"/>
+          </symbol>
+          <style>
+            .gmap-city { fill:#121A22; font-family:Georgia,'Times New Roman',serif; font-size:34px; font-weight:700; }
+            .gmap-uni { fill:#233442; font-family:Arial,sans-serif; font-size:19px; font-weight:700; paint-order:stroke; stroke:#FDFBF7; stroke-width:8px; stroke-linejoin:round; }
+            .gmap-tag { fill:#8A6B55; font-family:Arial,sans-serif; font-size:14px; font-weight:700; letter-spacing:.08em; paint-order:stroke; stroke:#FDFBF7; stroke-width:8px; stroke-linejoin:round; }
+            .route-label-g { fill:#A8622F; font-family:Arial,sans-serif; font-size:17px; font-weight:700; paint-order:stroke; stroke:#FDFBF7; stroke-width:10px; stroke-linejoin:round; }
+            .link-label-g { fill:#2E6E4E; font-family:Arial,sans-serif; font-size:16px; font-weight:700; paint-order:stroke; stroke:#FDFBF7; stroke-width:10px; stroke-linejoin:round; }
+            .airport-name-g { fill:#B51D22; font-family:Arial,sans-serif; font-size:19px; font-weight:700; paint-order:stroke; stroke:#FDFBF7; stroke-width:9px; stroke-linejoin:round; }
+            .airport-sub-g { fill:#A8622F; font-family:Arial,sans-serif; font-size:15px; font-weight:500; paint-order:stroke; stroke:#FDFBF7; stroke-width:9px; stroke-linejoin:round; }
+            .brown-route-g { fill:none; stroke:#B07A55; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+            .brown-ticks-g { fill:none; stroke:#C89A72; stroke-width:7; stroke-dasharray:1 11; stroke-linecap:round; opacity:.9; }
+            .link-route-g { fill:none; stroke:#3E8562; stroke-width:2.2; stroke-dasharray:7 6; stroke-linecap:round; opacity:.9; }
+            .pin-ring { fill:none; stroke:#FFFFFF; stroke-width:1.5; opacity:.55; }
+          </style>
+        </defs>
+
+        <!-- Georgia country outline, scaled and positioned so every campus pin and the airport sit clearly inside its borders -->
+        <image href="data:image/png;base64,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" x="-470" y="-160" width="2160" height="1120.5" preserveAspectRatio="none" />
+
+        <!-- City title -->
+        <text x="60" y="66" class="gmap-city">Tbilisi</text>
+        <rect x="60" y="82" width="152" height="26" rx="13" fill="#FBF1E8" stroke="#EAD6C4" />
+        <text x="136" y="100" fill="#A8622F" font-family="Arial,sans-serif" font-size="14" font-weight="700"
+          text-anchor="middle">(Capital City)</text>
+
+        <!-- compass -->
+        <g transform="translate(1474 60)" fill="#121A22" font-family="Arial,sans-serif" font-weight="700">
+          <text x="0" y="0" font-size="19" text-anchor="middle">N</text>
+          <path d="M0 18 L-9 40 L0 35 L9 40 Z" />
+          <path d="M0 68 L-8 45 L0 50 L8 45 Z" fill="#DED6CB" />
+        </g>
+
+        <!-- scale bar -->
+        <g transform="translate(60 962)" stroke="#121A22" stroke-width="3" fill="#121A22">
+          <path d="M0 0H150M0-8V8M150-8V8" />
+          <text x="75" y="30" text-anchor="middle" stroke="none" font-family="Arial,sans-serif" font-size="16"
+            font-weight="700">~5 km</text>
+        </g>
+
+        <!-- campus-to-campus links, now green -->
+        <g>
+          <path class="link-route-g" d="M230 236 L660 214" />
+          <path class="link-route-g" d="M660 214 L1120 236" />
+          <path class="link-route-g" d="M150 516 L768 468" />
+          <path class="link-route-g" d="M768 468 L1330 516" />
+          <path class="link-route-g" d="M300 730 L768 690" />
+          <path class="link-route-g" d="M768 690 L1240 730" />
+
+          <!-- left column, top to bottom -->
+          <path class="link-route-g" d="M230 236 L150 516" />
+          <path class="link-route-g" d="M150 516 L300 730" />
+
+          <!-- right column, top to bottom -->
+          <path class="link-route-g" d="M1120 236 L1330 516" />
+          <path class="link-route-g" d="M1330 516 L1240 730" />
+        </g>
+
+        <!-- brown airport routes to every university -->
+        <g>
+          <path class="brown-route-g" d="M230 236 Q499 556 768 876" />
+          <path class="brown-ticks-g" d="M230 236 Q499 556 768 876" />
+          <path class="brown-route-g" d="M660 214 Q588 566 768 876" />
+          <path class="brown-ticks-g" d="M660 214 Q588 566 768 876" />
+          <path class="brown-route-g" d="M1120 236 Q944 556 768 876" />
+          <path class="brown-ticks-g" d="M1120 236 Q944 556 768 876" />
+          <path class="brown-route-g" d="M150 516 Q459 696 768 876" />
+          <path class="brown-ticks-g" d="M150 516 Q459 696 768 876" />
+          <path class="brown-route-g" d="M768 468 Q608 672 768 876" />
+          <path class="brown-ticks-g" d="M768 468 Q608 672 768 876" />
+          <path class="brown-route-g" d="M1330 516 Q1049 696 768 876" />
+          <path class="brown-ticks-g" d="M1330 516 Q1049 696 768 876" />
+          <path class="brown-route-g" d="M300 730 Q534 803 768 876" />
+          <path class="brown-ticks-g" d="M300 730 Q534 803 768 876" />
+          <path class="brown-route-g" d="M768 690 Q768 783 768 876" />
+          <path class="brown-ticks-g" d="M768 690 Q768 783 768 876" />
+          <path class="brown-route-g" d="M1240 730 Q1004 803 768 876" />
+          <path class="brown-ticks-g" d="M1240 730 Q1004 803 768 876" />
+        </g>
+
+        <!-- campus markers: clean solid pin + graduation-cap glyph, no outer glow -->
+        <g>
+          <circle cx="230" cy="236" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="230" cy="236" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="217" y="223" width="26" height="26" />
+
+          <circle cx="660" cy="214" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="660" cy="214" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="647" y="201" width="26" height="26" />
+
+          <circle cx="1120" cy="236" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="1120" cy="236" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="1107" y="223" width="26" height="26" />
+
+          <circle cx="150" cy="516" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="150" cy="516" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="137" y="503" width="26" height="26" />
+
+          <circle cx="768" cy="468" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="768" cy="468" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="755" y="455" width="26" height="26" />
+
+          <circle cx="1330" cy="516" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="1330" cy="516" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="1317" y="503" width="26" height="26" />
+
+          <circle cx="300" cy="730" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="300" cy="730" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="287" y="717" width="26" height="26" />
+
+          <circle cx="768" cy="690" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="768" cy="690" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="755" y="677" width="26" height="26" />
+
+          <circle cx="1240" cy="730" r="23" fill="#1D2D3B" stroke="#C88A65" stroke-width="2.5" />
+          <circle cx="1240" cy="730" r="18" class="pin-ring" />
+          <use href="#uniGlyph" x="1227" y="717" width="26" height="26" />
+        </g>
+
+        <!-- university names -->
+        <g>
+          <text x="170" y="170" class="gmap-uni" text-anchor="start">East European</text>
+          <text x="170" y="193" class="gmap-uni" text-anchor="start">University</text>
+
+          <text x="660" y="148" class="gmap-uni" text-anchor="middle">Caucasus International</text>
+          <text x="660" y="171" class="gmap-uni" text-anchor="middle">University</text>
+
+          <text x="1120" y="170" class="gmap-uni" text-anchor="middle">European</text>
+          <text x="1120" y="193" class="gmap-uni" text-anchor="middle">University</text>
+
+          <text x="90" y="450" class="gmap-uni" text-anchor="start">David Tvildiani</text>
+          <text x="90" y="473" class="gmap-uni" text-anchor="start">Medical University</text>
+
+          <text x="768" y="402" class="gmap-uni" text-anchor="middle">Grigol Robakidze</text>
+          <text x="768" y="425" class="gmap-uni" text-anchor="middle">University</text>
+          <text x="768" y="519" class="route-label-g" text-anchor="middle">23 km</text>
+
+          <text x="1390" y="450" class="gmap-uni" text-anchor="end">Caucasus</text>
+          <text x="1390" y="473" class="gmap-uni" text-anchor="end">University</text>
+
+          <text x="300" y="664" class="gmap-uni" text-anchor="middle">University of</text>
+          <text x="300" y="687" class="gmap-uni" text-anchor="middle">Georgia</text>
+
+          <text x="768" y="624" class="gmap-uni" text-anchor="middle">Georgian National</text>
+          <text x="768" y="647" class="gmap-uni" text-anchor="middle">University SEU</text>
+
+          <text x="1300" y="664" class="gmap-uni" text-anchor="end">Tbilisi Medical</text>
+          <text x="1300" y="687" class="gmap-uni" text-anchor="end">Academy</text>
+        </g>
+
+        <!-- distance labels: airport-to-campus (brown) and campus-to-campus (green) -->
+        <g aria-label="Distance labels">
+          <text x="359" y="214" class="link-label-g" text-anchor="middle">5 km</text>
+          <text x="798" y="206" class="link-label-g" text-anchor="middle">6 km</text>
+          <text x="335" y="487" class="link-label-g" text-anchor="middle">4 km</text>
+          <text x="937" y="467" class="link-label-g" text-anchor="middle">5 km</text>
+          <text x="440" y="703" class="link-label-g" text-anchor="middle">3 km</text>
+          <text x="910" y="687" class="link-label-g" text-anchor="middle">4 km</text>
+
+          <text x="172" y="378" class="link-label-g" text-anchor="end">10 km</text>
+          <text x="207" y="622" class="link-label-g" text-anchor="end">9 km</text>
+          <text x="1248" y="378" class="link-label-g" text-anchor="start">12 km</text>
+          <text x="1307" y="622" class="link-label-g" text-anchor="start">8 km</text>
+
+          <text x="338" y="364" class="route-label-g" text-anchor="middle">28 km</text>
+          <text x="641" y="353" class="route-label-g" text-anchor="middle">24 km</text>
+          <text x="1050" y="364" class="route-label-g" text-anchor="middle">19 km</text>
+          <text x="274" y="588" class="route-label-g" text-anchor="middle">27 km</text>
+          <text x="1218" y="588" class="route-label-g" text-anchor="middle">23 km</text>
+          <text x="394" y="759" class="route-label-g" text-anchor="middle">21 km</text>
+          <text x="768" y="808" class="route-label-g" text-anchor="middle">14 km</text>
+          <text x="1146" y="759" class="route-label-g" text-anchor="middle">15 km</text>
+        </g>
+
+        <!-- airport icon -->
+        <g stroke="#C62828" fill="#C62828" stroke-linejoin="round">
+          <g transform="translate(768 876)">
+            <circle r="28" fill="#FFF" stroke-width="2" />
+            <path d="M0-18 L5-4 L16 1 L15 6 L4 4 L2 18 L-2 18 L-4 4 L-15 6 L-16 1 L-5-4 Z" stroke="none" />
+          </g>
+        </g>
+        <text x="768" y="932" class="airport-name-g" text-anchor="middle">Tbilisi Int. Airport (TBS)</text>
+        <text x="768" y="958" class="airport-sub-g" text-anchor="middle">17 km from city centre</text>
+      </svg>
+    </div>
+
+    <!-- THREE INFO CARDS -->
+    <div class="gmap-cards">
+      <div class="gmap-card">
+        <div class="gmap-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+            <path d="M9 9v.01M9 12v.01M9 15v.01" />
+          </svg>
+        </div>
+        <h4 class="gmap-card-title">Nine Campuses, One City</h4>
+        <p class="gmap-card-desc">Eight universities for English-taught MBBS and one for BSc Nursing — all located in
+          Tbilisi. Campuses sit 2–7 km apart, so students share the same hostels, hospitals, food outlets and
+          community wherever they enrol.</p>
+      </div>
+      <div class="gmap-card">
+        <div class="gmap-card-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+        </div>
+        <h4 class="gmap-card-title">Travel &amp; Connectivity</h4>
+        <p class="gmap-card-desc">Tbilisi International Airport (TBS) is the single arrival point, 17 km from the city
+          centre and 14–28 km from every campus. Direct and one-stop flights connect Delhi, Mumbai, Kochi and Dubai
+          year-round.</p>
+      </div>
+      <div class="gmap-card">
+        <div class="gmap-card-icon">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+            <path d="M2 12h20" />
+          </svg>
+        </div>
+        <h4 class="gmap-card-title">Student Life</h4>
+        <p class="gmap-card-desc">Affordable living ($250–400/month), a large Indian and Kerala community, Indian and
+          halal messes near every campus, metro and minibus transport, and one of the safest capitals in the
+          region.</p>
+      </div>
+    </div>
+
+    <!-- BOTTOM PHOTO BANNER -->
+    <div class="gmap-banner">
+      <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i7614cdae39f2708d/version/1560166289/tbilisi.jpg"
+        alt="Tbilisi cityscape">
+      <div class="gmap-banner-label">Student-Friendly Capital</div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="gmap-footer">
+      <div class="gmap-footer-left">\\ Study in Georgia \\</div>
+      <div class="gmap-footer-right"></div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
   <section id="page-4-mbbs">
     <style>
       .pg8 {
@@ -1871,7 +2387,8 @@
 
 
 
-<!-- PAGE 7 — TOP UNIVERSITIES GRID -->
+
+
 <section id="page-7-universities">
   <style>
     .pg7 {
@@ -4408,6 +4925,273 @@
 
 
 
+  <!-- PAGE — COMPARE GEORGIAN MEDICAL UNIVERSITIES -->
+  <section id="page-georgia-uni-comparison">
+
+    <style>
+      @media print {
+
+        #page-georgia-uni-comparison,
+        #page-georgia-uni-comparison * {
+          box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          text-shadow: none !important;
+          filter: none !important;
+          -webkit-filter: none !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        #page-georgia-uni-comparison {
+          page-break-after: always !important;
+          break-after: page !important;
+        }
+      }
+
+      .pg11c {
+        position: relative;
+        height: 1123px;
+        background: var(--ivory) !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pg11c-top {
+        padding: 54px 40px 0;
+      }
+
+      .pg11c-h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.05;
+        margin: 0 0 14px;
+        letter-spacing: -0.01em;
+      }
+
+      .pg11c-h2 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .pg11c-intro {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+        font-weight: 400;
+        max-width: 620px;
+      }
+
+      .pg11c-table-area {
+        padding: 22px 40px 40px;
+      }
+
+      .pg11c-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13.5px;
+        text-align: left;
+      }
+
+      .pg11c-table thead {
+        background: var(--ivory) !important;
+        border-bottom: 1px solid rgba(200, 138, 101, 0.18);
+      }
+
+      .pg11c-table th {
+        padding: 12px 16px;
+        font-size: 9.5px;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+        border: 1px solid rgba(200, 138, 101, 0.16);
+        background: var(--ivory) !important;
+      }
+
+      .pg11c-table th.th-hl {
+        background: rgba(200, 138, 101, 0.10) !important;
+        color: var(--gold);
+        text-align: center;
+      }
+
+      .pg11c-table td {
+        padding: 8px 16px;
+        border: 1px solid rgba(200, 138, 101, 0.14);
+        color: var(--ink-soft);
+        vertical-align: middle;
+        background: #fff !important;
+      }
+
+      .pg11c-table td.td-hl {
+        background: rgba(200, 138, 101, 0.05) !important;
+        color: var(--ink);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .pg11c-table td:first-child {
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .pg11c-table td ul {
+        margin: 0;
+        padding-left: 16px;
+      }
+
+      .pg11c-table td li {
+        margin: 0 0 5px;
+        line-height: 1.3;
+      }
+
+    </style>
+
+    <div class="page-fixed pg11c">
+
+      <div class="pg11c-top">
+        <h2 class="pg11c-h2">Compare.<br><em>Georgian Medical Universities</em></h2>
+        <p class="pg11c-intro">Eight accredited universities in Tbilisi offering English-taught MBBS — choose based on
+          tuition, campus size, intake preferences, or clinical exposure opportunities.</p>
+      </div>
+
+      <div class="pg11c-table-area">
+        <table class="pg11c-table">
+          <thead>
+            <tr>
+              <th style="width:20%">University</th>
+              <th style="width:11%">City</th>
+              <th class="th-hl" style="width:13%">Tuition (USD)</th>
+              <th style="width:11%">Duration</th>
+              <th style="width:9%">Estd.</th>
+              <th style="width:36%">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>University of Georgia</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$6,500</td>
+              <td>6 Years</td>
+              <td>2004</td>
+              <td>
+                <ul>
+                  <li>Largest private campus in Georgia</li>
+                  <li>Strong global university rankings</li>
+                  <li>Wide clinical rotation network</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Caucasus University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$6,000</td>
+              <td>6 Years</td>
+              <td>1998</td>
+              <td>
+                <ul>
+                  <li>Modern city-centre campus</li>
+                  <li>Strong international academic network</li>
+                  <li>Standard <strong>September</strong> intake</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Caucasus International University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$6,000</td>
+              <td>6 Years</td>
+              <td>1995</td>
+              <td>
+                <ul>
+                  <li>Own teaching hospital on campus</li>
+                  <li>Early hands-on patient exposure</li>
+                  <li>25+ affiliated clinical partners</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>David Tvildiani Medical University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$6,000</td>
+              <td>6 Years</td>
+              <td>1992</td>
+              <td>
+                <ul>
+                  <li>US-style AMEE curriculum</li>
+                  <li>Strongest <strong>USMLE</strong> track record</li>
+                  <li>Research-oriented teaching</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>European University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$6,500</td>
+              <td>6 Years</td>
+              <td>2012</td>
+              <td>
+                <ul>
+                  <li>New infrastructure and simulation labs</li>
+                  <li>Large Indian student community</li>
+                  <li>Jo Ann University Hospital access</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Tbilisi Medical Academy</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$7,000</td>
+              <td>6 Years</td>
+              <td>1992</td>
+              <td>
+                <ul>
+                  <li>Purely medical institution</li>
+                  <li>Small batches with close mentoring</li>
+                  <li>High licensing exam pass rates</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Georgian National University SEU</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$5,900</td>
+              <td>6 Years</td>
+              <td>2001</td>
+              <td>
+                <ul>
+                  <li>Budget-friendly tuition</li>
+                  <li>In-campus hostel and Indian mess</li>
+                  <li>Advanced simulation facilities</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>East European University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">$5,500</td>
+              <td>6 Years</td>
+              <td>2012</td>
+              <td>
+                <ul>
+                  <li>Lowest MBBS tuition in Georgia</li>
+                  <li>Two affiliated hospitals, 1,100+ beds</li>
+                  <li>Accessible entry requirements</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
 <section id="page-16-licensing">
     <style>
       /* ── ENGINE & PRINT MASTER OVERRIDES ── */
@@ -5565,6 +6349,10 @@
 
 </div>
 </section>
+
+
+
+
 
 
 
@@ -6954,6 +7742,733 @@
 
 </section>
 
+
+
+
+  <!-- PAGE — COMPARE GEORGIAN NURSING UNIVERSITIES -->
+  <section id="page-georgia-nursing-comparison">
+
+    <style>
+      @media print {
+
+        #page-georgia-nursing-comparison,
+        #page-georgia-nursing-comparison * {
+          box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          text-shadow: none !important;
+          filter: none !important;
+          -webkit-filter: none !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        #page-georgia-nursing-comparison {
+          page-break-after: always !important;
+          break-after: page !important;
+        }
+      }
+
+      .pg4c {
+        position: relative;
+        height: 1123px;
+        background: var(--ivory) !important;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pg4c-top {
+        padding: 48px 40px 0;
+      }
+
+      .pg4c-h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.05;
+        margin: 0 0 14px;
+        letter-spacing: -0.01em;
+      }
+
+      .pg4c-h2 em {
+        font-style: italic;
+        color: var(--gold);
+      }
+
+      .pg4c-intro {
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--ink-soft);
+        font-weight: 400;
+        max-width: 560px;
+      }
+
+      .pg4c-table-area {
+        padding: 24px 40px 0;
+      }
+
+      .pg4c-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        text-align: left;
+      }
+
+      .pg4c-table thead {
+        background: var(--ivory) !important;
+        border-bottom: 1px solid rgba(200, 138, 101, 0.18);
+      }
+
+      .pg4c-table th {
+        padding: 15px 16px;
+        font-size: 9.5px;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+        border: 1px solid rgba(200, 138, 101, 0.16);
+        background: var(--ivory) !important;
+      }
+
+      .pg4c-table th.th-hl {
+        background: rgba(200, 138, 101, 0.10) !important;
+        color: var(--gold);
+        text-align: center;
+      }
+
+      .pg4c-table td {
+        padding: 13px 16px;
+        border: 1px solid rgba(200, 138, 101, 0.14);
+        color: var(--ink-soft);
+        vertical-align: middle;
+        background: #fff !important;
+      }
+
+      .pg4c-table td.td-hl {
+        background: rgba(200, 138, 101, 0.05) !important;
+        color: var(--ink);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .pg4c-table td:first-child {
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .pg4c-table td ul {
+        margin: 0;
+        padding-left: 15px;
+      }
+
+      .pg4c-table td li {
+        margin: 0 0 4px;
+        line-height: 1.32;
+      }
+
+      .pg4c-career {
+        margin: 18px 40px 26px;
+        background: var(--obsidian-2) !important;
+        border-radius: 20px;
+        padding: 22px 36px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .pg4c-career-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      .pg4c-career-title em {
+        font-style: italic;
+        color: var(--gold-2);
+      }
+
+      .pg4c-career-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .pg4c-career-item {
+        background: rgba(255, 255, 255, 0.07) !important;
+        border-radius: 14px;
+        padding: 16px 14px;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid rgba(200, 138, 101, 0.22);
+      }
+
+      .pg4c-career-item .ic {
+        width: 36px;
+        height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold-2);
+      }
+
+      .pg4c-career-item .ic svg {
+        width: 36px;
+        height: 36px;
+        stroke: currentColor;
+        overflow: visible;
+      }
+
+      .pg4c-career-item span.lbl {
+        font-size: 12.5px;
+        letter-spacing: .04em;
+        font-weight: 600;
+        color: var(--gold-light);
+        line-height: 1.3;
+      }
+    </style>
+
+    <div class="page-fixed pg4c">
+
+      <div class="pg4c-top">
+        <h2 class="pg4c-h2">Compare.<br><em>Georgia Nursing</em></h2>
+        <p class="pg4c-intro">Five accredited universities offering globally recognised B.Sc. Nursing degrees — choose
+          based on tuition, campus facilities, or clinical exposure.</p>
+      </div>
+
+      <div class="pg4c-table-area">
+        <table class="pg4c-table">
+          <thead>
+            <tr>
+              <th style="width:22%">University</th>
+              <th style="width:13%">City</th>
+              <th class="th-hl" style="width:16%">Tuition</th>
+              <th style="width:13%">Duration</th>
+              <th style="width:36%">Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>University of Georgia</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">USD 4,000</td>
+              <td>4 Years</td>
+              <td>
+                <ul>
+                  <li>Largest private campus in Georgia</li>
+                  <li>Wide clinical rotation network</li>
+                  <li>Strong global university rankings</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Caucasus International University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">USD 3,300</td>
+              <td>4 Years</td>
+              <td>
+                <ul>
+                  <li>Most affordable nursing tuition</li>
+                  <li>25+ affiliated Tbilisi hospitals</li>
+                  <li>25 years of academic excellence</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Georgian National University SEU</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">USD 3,500</td>
+              <td>4 Years</td>
+              <td>
+                <ul>
+                  <li>Advanced simulation facilities</li>
+                  <li>One of the largest Caucasus campuses</li>
+                  <li>In-campus hostel and Indian mess</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>European University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">USD 3,500</td>
+              <td>4 Years</td>
+              <td>
+                <ul>
+                  <li>Jo Ann University Hospital affiliation</li>
+                  <li>Modern simulation laboratories</li>
+                  <li>Strong international student support</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>Grigol Robakidze University</td>
+              <td>Tbilisi</td>
+              <td class="td-hl">USD 3,500</td>
+              <td>4 Years</td>
+              <td>
+                <ul>
+                  <li>Top-5 for graduate employment</li>
+                  <li>Students from 50+ countries</li>
+                  <li>Clinical internships from early years</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pg4c-career">
+        <div class="pg4c-career-title">Career <em>Opportunities</em></div>
+        <div class="pg4c-career-grid">
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M19 21V9a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v12" />
+                <path d="M2 21h20" />
+                <path d="M10 12h4" />
+                <path d="M12 10v4" />
+              </svg>
+            </span>
+            <span class="lbl">Hospitals</span>
+          </div>
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M2 22C2 12 10 4 22 2c0 10-8 18-20 20Z" />
+                <path d="M2 22 13 11" />
+              </svg>
+            </span>
+            <span class="lbl">Community Healthcare</span>
+          </div>
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+              </svg>
+            </span>
+            <span class="lbl">Elder Care</span>
+          </div>
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+                <path d="M16 3h5v5" />
+                <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+                <path d="M8 21H3v-5" />
+              </svg>
+            </span>
+            <span class="lbl">Rehabilitation Centres</span>
+          </div>
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+            </span>
+            <span class="lbl">International Healthcare Organizations</span>
+          </div>
+          <div class="pg4c-career-item">
+            <span class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polygon
+                  points="12 7 13.5 10 16.5 10.5 14.25 12.5 14.85 15.5 12 14 9.15 15.5 9.75 12.5 7.5 10.5 10.5 10 12 7" />
+              </svg>
+            </span>
+            <span class="lbl">European Healthcare Sector</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+  <!-- PAGE — EU PRACTICE / EUROPEAN UNION PATHWAY -->
+  <section id="page-eu-practice">
+    <style>
+      .eu-page {
+        background: #0D151C !important;
+        width: 794px;
+        height: 1123px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Jost', sans-serif;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+
+      .eu-bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 60% 35%;
+        z-index: 0;
+        display: block;
+      }
+
+      .eu-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(110deg,
+          rgba(10, 17, 23, 0.88) 0%,
+          rgba(10, 17, 23, 0.80) 35%,
+          rgba(10, 17, 23, 0.60) 65%,
+          rgba(10, 17, 23, 0.34) 100%) !important;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .eu-content {
+        position: relative;
+        z-index: 2;
+        padding: 40px 52px 32px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .eu-title-wrap {
+        margin-bottom: 14px;
+        flex-shrink: 0;
+      }
+
+      .eu-main-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 86px;
+        font-weight: 700;
+        color: #FFFFFF !important;
+        line-height: 0.92;
+        margin: 0;
+        text-shadow: 0 3px 16px rgba(0, 0, 0, 0.6);
+      }
+
+      .eu-sub-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 52px;
+        font-weight: 600;
+        font-style: italic;
+        color: #D8A07E !important;
+        line-height: 1.08;
+        margin: 2px 0 0;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .eu-timeline {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .eu-step {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        position: relative;
+        flex: 1;
+      }
+
+      .eu-icon-col {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        width: 56px;
+        height: 100%;
+      }
+
+      .eu-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: rgba(29, 45, 59, 0.90) !important;
+        border: 2px solid rgba(200, 138, 101, 0.45) !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 2;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .eu-icon svg {
+        width: 28px;
+        height: 28px;
+        stroke: #E8BCA0;
+        fill: none;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .eu-connector {
+        position: absolute;
+        left: 50%;
+        top: 56px;
+        bottom: 4px;
+        width: 2px;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+
+      .eu-connector::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 10px;
+        background: repeating-linear-gradient(
+          180deg,
+          rgba(200, 138, 101, 0.65) 0px,
+          rgba(200, 138, 101, 0.65) 7px,
+          transparent 7px,
+          transparent 15px
+        );
+      }
+
+      .eu-connector::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 9px solid rgba(200, 138, 101, 0.70);
+      }
+
+      .eu-step:last-child .eu-connector {
+        display: none;
+      }
+
+      .eu-step-text {
+        padding-top: 16px;
+        flex: 1;
+      }
+
+      .eu-step-text .step-label {
+        font-size: 20px;
+        font-weight: 600;
+        color: #F8F6F2 !important;
+        line-height: 1.3;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+      }
+
+      .eu-step-text .step-sub {
+        font-size: 14.5px;
+        color: rgba(243, 216, 200, 0.85) !important;
+        line-height: 1.3;
+        margin-top: 3px;
+        font-weight: 400;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+      }
+
+      .eu-step.is-final .eu-icon {
+        background: rgba(40, 61, 79, 0.94) !important;
+        border-color: rgba(216, 160, 126, 0.65) !important;
+        width: 58px;
+        height: 58px;
+        box-shadow: 0 2px 16px rgba(200, 138, 101, 0.20);
+      }
+
+      .eu-step.is-final .eu-icon svg {
+        width: 30px;
+        height: 30px;
+        stroke: #F3D8C8;
+      }
+
+      .eu-step.is-final .step-label {
+        color: #F3D8C8 !important;
+        font-size: 21px;
+        font-weight: 700;
+      }
+
+      @media print {
+        #page-eu-practice {
+          page-break-after: always !important;
+          break-after: page !important;
+        }
+        #page-eu-practice,
+        #page-eu-practice * {
+          box-shadow: none !important;
+          -webkit-box-shadow: none !important;
+          text-shadow: none !important;
+          filter: none !important;
+          -webkit-filter: none !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .eu-page {
+          width: 794px !important;
+          height: 1123px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .eu-bg-img {
+          opacity: 0.5 !important;
+        }
+        .eu-overlay {
+          background: linear-gradient(110deg,
+            rgba(10, 17, 23, 0.85) 0%,
+            rgba(10, 17, 23, 0.77) 35%,
+            rgba(10, 17, 23, 0.57) 65%,
+            rgba(10, 17, 23, 0.32) 100%) !important;
+        }
+      }
+    </style>
+
+    <div class="page-fixed eu-page">
+      <img class="eu-bg-img"
+        src="/image copy 3.png"
+        alt="Europe from space at night">
+      <div class="eu-overlay"></div>
+
+      <div class="eu-content">
+        <div class="eu-title-wrap">
+          <h2 class="eu-main-title">EU Practice</h2>
+          <h3 class="eu-sub-title">European Union Pathway</h3>
+        </div>
+<br>
+        <div class="eu-timeline">
+
+          <div class="eu-step">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
+              <div class="eu-connector"></div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Georgian Medical University Graduation</div>
+            </div>
+          </div>
+
+          <div class="eu-step">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <path d="M9 15l2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="eu-connector"></div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Degree Apostille &amp; Georgian Professional Documents</div>
+            </div>
+          </div>
+
+          <div class="eu-step">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="12" cy="10" r="1" fill="currentColor" stroke="none"/>
+                  <circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+              <div class="eu-connector"></div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Language Qualification</div>
+            </div>
+          </div>
+
+          <div class="eu-step">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/>
+                  <path d="M9 9v.01M9 12v.01M9 15v.01"/>
+                </svg>
+              </div>
+              <div class="eu-connector"></div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Qualification Recognition in the Chosen EU Country</div>
+            </div>
+          </div>
+
+          <div class="eu-step">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 7V5a4 4 0 0 0-8 0v2"/>
+                  <circle cx="12" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                </svg>
+              </div>
+              <div class="eu-connector"></div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Job Offer &amp; Work Permit</div>
+            </div>
+          </div>
+
+          <div class="eu-step is-final">
+            <div class="eu-icon-col">
+              <div class="eu-icon">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/>
+                  <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/>
+                  <circle cx="20" cy="10" r="2"/>
+                </svg>
+              </div>
+            </div>
+            <div class="eu-step-text">
+              <div class="step-label">Employment or Specialisation</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
   <section id="page-16-final">
     <style>
       .pg16 {
@@ -7226,6 +8741,6 @@
     </div>
   </section>
   <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a0d338372ec7380b',t:'MTc4MTcxMTUyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1244de39fbc7fb1',t:'MTc4MjU2MTc2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a153c02e8b819bed',t:'MTc4MzA1OTI3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a1244de39fbc7fb1',t:'MTc4MjU2MTc2MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a153c02e8b819bed',t:'MTc4MzA1OTI3NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a20a302d7b067f4a',t:'MTc4NDk3MjI2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a20ac5661a59179f',t:'MTc4NDk3ODM4MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 
 </html>
